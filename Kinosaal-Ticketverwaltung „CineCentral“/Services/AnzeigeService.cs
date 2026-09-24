@@ -11,8 +11,10 @@ public class AnzeigeService
 {
     public void ZeigeKinosaal(Kinosaal kinosaal)
     {
-        Console.Write("   ");
+        Console.Write(" ");
 
+        Console.ResetColor();
+       
         for (int sitz = 1; sitz <= kinosaal.AnzahlSitze; sitz++)
         {
             Console.Write(sitz + " ");
@@ -26,7 +28,21 @@ public class AnzeigeService
 
             for (int sitz = 0; sitz < kinosaal.AnzahlSitze; sitz++)
             {
-                Console.Write(kinosaal.Sitzplaetze[reihe, sitz]+ " ");
+                char status = kinosaal.Sitzplaetze[reihe, sitz];
+
+                if (status == 'R')
+                {
+                    Console.ForegroundColor = ConsoleColor.Blue;
+                }
+
+                if (status == 'B')
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
+
+                Console.Write(status + " ");
+
+                Console.ResetColor();
             }
 
             Console.WriteLine();
