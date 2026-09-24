@@ -11,6 +11,15 @@ public class AnzeigeService
 {
     public void ZeigeKinosaal(Kinosaal kinosaal)
     {
+        Console.Write("   ");
+
+        for (int sitz = 1; sitz <= kinosaal.AnzahlSitze; sitz++)
+        {
+            Console.Write(sitz + " ");
+        }
+
+        Console.WriteLine();
+
         for (int reihe = 0; reihe < kinosaal.AnzahlReihen; reihe++)
         {
             for (int sitz = 0; sitz < kinosaal.AnzahlSitze; sitz++)
