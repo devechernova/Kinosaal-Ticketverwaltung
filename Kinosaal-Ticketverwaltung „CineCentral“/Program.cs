@@ -33,11 +33,33 @@ public class Program
                 break;
             }
 
-            Console.Write("Reihe: ");
-            int reihe = Convert.ToInt32(Console.ReadLine());
+            int reihe;
 
-            Console.Write("Sitz: ");
-            int sitz = Convert.ToInt32(Console.ReadLine());
+            while (true)
+            {
+                Console.Write("Reihe: ");
+
+                if (int.TryParse(Console.ReadLine(), out reihe))
+                {
+                    break;
+                }
+
+                Console.WriteLine("Ungültige Eingabe. Bitte eine Zahl eingeben.");
+            }
+
+            int sitz;
+
+            while (true)
+            {
+                Console.Write("Sitz: ");
+
+                if (int.TryParse(Console.ReadLine(), out sitz))
+                {
+                    break;
+                }
+
+                Console.WriteLine("Ungültige Eingabe. Bitte eine Zahl eingeben.");
+            }
 
             if (aktion == "b")
             {
