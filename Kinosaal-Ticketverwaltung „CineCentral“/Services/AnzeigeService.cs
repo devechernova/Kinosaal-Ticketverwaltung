@@ -22,6 +22,8 @@ public class AnzeigeService
 
         for (int reihe = 0; reihe < kinosaal.AnzahlReihen; reihe++)
         {
+            Console.Write($"{reihe + 1:D2} ");
+
             for (int sitz = 0; sitz < kinosaal.AnzahlSitze; sitz++)
             {
                 Console.Write(kinosaal.Sitzplaetze[reihe, sitz]+ " ");
