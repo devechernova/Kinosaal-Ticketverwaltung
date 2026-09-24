@@ -28,6 +28,18 @@ public class Program
 
             aktion = Console.ReadLine();
 
+            Console.WriteLine("Eingegeben:");
+            Console.WriteLine(aktion);
+
+            if (aktion != "b" &&
+                aktion != "r" &&
+                aktion != "f" &&
+                aktion != "q")
+            {
+                Console.WriteLine("Ungültige Aktion.");
+                continue;
+            }
+
             if (aktion == "q")
             {
                 break;
@@ -39,12 +51,14 @@ public class Program
             {
                 Console.Write("Reihe: ");
 
-                if (int.TryParse(Console.ReadLine(), out reihe))
+                if (int.TryParse(Console.ReadLine(), out reihe)
+                   && reihe >= 1
+                   && reihe <= kinosaal.AnzahlReihen)
                 {
                     break;
                 }
 
-                Console.WriteLine("Ungültige Eingabe. Bitte eine Zahl eingeben.");
+                Console.WriteLine($"Ungültige Eingabe. Bitte eine Zahl zwischen 1 und {kinosaal.AnzahlReihen} eingeben.");
             }
 
             int sitz;
@@ -53,12 +67,14 @@ public class Program
             {
                 Console.Write("Sitz: ");
 
-                if (int.TryParse(Console.ReadLine(), out sitz))
+                if (int.TryParse(Console.ReadLine(), out sitz)
+                    && sitz >= 1
+                    && sitz <= kinosaal.AnzahlSitze)
                 {
                     break;
                 }
 
-                Console.WriteLine("Ungültige Eingabe. Bitte eine Zahl eingeben.");
+                Console.WriteLine($"Ungültige Eingabe. Bitte eine Zahl zwischen 1 und {kinosaal.AnzahlSitze} eingeben.");
             }
 
             if (aktion == "b")
