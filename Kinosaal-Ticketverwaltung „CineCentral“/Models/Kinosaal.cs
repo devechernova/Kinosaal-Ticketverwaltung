@@ -25,9 +25,9 @@ namespace Kinosaal_Ticketverwaltung__CineCentral_.Models
         {
            for (int reihe = 0; reihe < AnzahlReihen; reihe++)
             {
-                for (int sitze = 0; sitze < AnzahlSitze; sitze++)
+                for (int sitz = 0; sitz < AnzahlSitze; sitz++)
                 {
-                    Sitzplaetze[reihe, sitze] = 'F';
+                    Sitzplaetze[reihe, sitz] = 'F';
                 }
             }
         }
