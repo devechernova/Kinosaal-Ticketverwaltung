@@ -19,7 +19,19 @@ namespace Kinosaal_Ticketverwaltung__CineCentral_.Models
         AnzahlSitze = anzahlSitze;
 
             Sitzplaetze = new char[AnzahlReihen, AnzahlSitze];
+            InitialisiereSaal();
         }
-       
+        private void InitialisiereSaal()
+        {
+           for (int reihe = 0; reihe < AnzahlReihen; reihe++)
+            {
+                for (int sitze = 0; sitze < AnzahlSitze; sitze++)
+                {
+                    Sitzplaetze[reihe, sitze] = 'F';
+                }
+            }
+        }
+
+
     }
 }
