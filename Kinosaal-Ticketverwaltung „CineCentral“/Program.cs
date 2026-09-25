@@ -15,8 +15,6 @@ public class Program
 
         while (aktion != "q")
         {
-            //Console.Clear();
-
             anzeigeService.ZeigeKinosaal(kinosaal);
 
             Console.WriteLine();
